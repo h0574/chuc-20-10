@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng 20/10 - 12A10 🎀</title>
+    <style>
+        :root {
+            --primary-pink: #ff69b4;
+            --secondary-pink: #ff85c1;
+            --pastel-pink: #ffcce7;
+            --light-pink: #ffe4f3;
+            --pale-pink: #ffeef8;
+            --white: #ffffff;
+            --shadow-light: rgba(255, 105, 180, 0.1);
+            --shadow-medium: rgba(255, 105, 180, 0.2);
+            --shadow-strong: rgba(255, 105, 180, 0.4);
+            --glow: rgba(255, 204, 231, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--pale-pink) 0%, var(--light-pink) 50%, #ffd6ed 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Floating elements with parallax */
+        .float-element {
+            position: fixed;
+            font-size: clamp(16px, 2vw, 24px);
+            opacity: 0.4;
+            animation: floatParallax 12s infinite ease-in-out;
+            pointer-events: none;
+            z-index: 1;
+            will-change: transform;
+            filter: drop-shadow(0 2px 8px var(--shadow-light));
+        }
+
+        .float-element:nth-child(odd) {
+            animation-direction: reverse;
+            animation-duration: 15s;
+        }
+
+        @keyframes floatParallax {
+            0%, 100% { 
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 0.3;
+            }
+            25% {
+                transform: translateY(-20px) rotate(90deg) scale(1.1);
+                opacity: 0.6;
+            }
+            50% { 
+                transform: translateY(-40px) rotate(180deg) scale(1.2);
+                opacity: 0.4;
+            }
+            75% {
+                transform: translateY(-20px) rotate(270deg) scale(1.1);
+                opacity: 0.6;
+            }
+        }
+
+        /* Compact responsive container */
+        .container {
+            max-width: min(95vw, 1000px);
+            margin: 0 auto;
+            padding: clamp(16px, 4vw, 40px) clamp(16px, 4vw, 24px);
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(20px, 4vw, 40px);
+        }
+
+        /* Enhanced header */
+        .header {
+            text-align: center;
+            animation: fadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .header h1 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--secondary-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 12px var(--shadow-medium);
+            margin-bottom: clamp(12px, 3vw, 24px);
+            letter-spacing: -0.02em;
+        }
+
+        .header p {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            color: var(--secondary-pink);
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* Modern button */
+        .btn-container {
+            text-align: center;
+            animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+        }
+
+        .wish-btn {
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--secondary-pink) 100%);
+            color: var(--white);
+            border: none;
+            padding: clamp(14px, 3vw, 20px) clamp(32px, 6vw, 48px);
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 32px var(--shadow-strong), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            will-change: transform;
+        }
+
+        .wish-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .wish-btn:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 40px var(--shadow-strong), 0 0 20px var(--glow), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .wish-btn:hover::before {
+            left: 100%;
+        }
+
+        .wish-btn:active {
+            transform: translateY(-2px) scale(0.98);
+            transition-duration: 0.1s;
+        }
+
+        /* Compact iMessage-style messages container */
+        .messages-container {
+            position: relative;
+            min-height: 40vh;
+            height: 40vh;
+            display: grid;
+            gap: clamp(12px, 2vw, 20px);
+            animation: fadeInUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+        }
+
+        /* Enhanced iMessage-style bubbles */
+        .message-bubble {
+            position: absolute;
+            background: linear-gradient(135deg, var(--white) 0%, #fefcfe 100%);
+            padding: clamp(12px, 3vw, 18px) clamp(16px, 4vw, 24px);
+            border-radius: 24px;
+            box-shadow: 
+                0 4px 20px var(--shadow-light),
+                0 1px 4px var(--shadow-medium),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8),
+                inset 0 -1px 0 rgba(255, 105, 180, 0.05);
+            max-width: min(85vw, 500px);
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            font-weight: 500;
+            color: var(--primary-pink);
+            animation: bubbleSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            border: 1px solid rgba(255, 204, 231, 0.3);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            backdrop-filter: blur(10px);
+            will-change: transform, opacity;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .message-bubble:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 
+                0 8px 32px var(--shadow-medium),
+                0 2px 8px var(--shadow-strong),
+                0 0 16px var(--glow),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                inset 0 -1px 0 rgba(255, 105, 180, 0.1);
+        }
+
+        /* Staggered entrance animation */
+        @keyframes bubbleSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) translateX(-10px) scale(0.8);
+                filter: blur(4px);
+            }
+            60% {
+                transform: translateY(-2px) translateX(2px) scale(1.05);
+                filter: blur(0);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) translateX(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        /* Enhanced Apple-style animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-40px) scale(0.95);
+                filter: blur(2px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+                filter: blur(2px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        /* Enhanced heart container with depth */
+        #heart-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: clamp(150px, 20vw, 250px);
+            height: clamp(150px, 20vw, 250px);
+            pointer-events: none;
+            z-index: 1;
+            filter: drop-shadow(0 8px 16px var(--shadow-light));
+        }
+
+        /* Enhanced beating heart using emoji */
+        #beating-heart {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: heartbeatEnhanced 1.8s infinite cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform;
+            font-size: clamp(60px, 15vw, 100px);
+        }
+
+        #beating-heart::before {
+            content: '🩷';
+            display: block;
+            filter: drop-shadow(0 4px 12px var(--shadow-medium));
+        }
+
+        @keyframes heartbeatEnhanced {
+            0%, 100% { 
+                transform: scale(1);
+                filter: brightness(1);
+            }
+            15% { 
+                transform: scale(0.9);
+                filter: brightness(1.1);
+            }
+            30% { 
+                transform: scale(1.15);
+                filter: brightness(1.2);
+            }
+            45% { 
+                transform: scale(1.05);
+                filter: brightness(1.1);
+            }
+            60% { 
+                transform: scale(1.1);
+                filter: brightness(1.15);
+            }
+        }
+
+        /* Enhanced falling hearts */
+        .falling-heart {
+            position: fixed;
+            font-size: clamp(20px, 4vw, 30px);
+            opacity: 0.6;
+            animation: fallEnhanced 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 2;
+            will-change: transform;
+            filter: drop-shadow(0 2px 4px var(--shadow-light));
+        }
+
+        .falling-heart:nth-child(even) {
+            animation-duration: 10s;
+            animation-delay: -2s;
+        }
+
+        @keyframes fallEnhanced {
+            0% {
+                transform: translateY(-10vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+                transform: translateY(5vh) rotate(36deg) scale(1);
+            }
+            90% {
+                opacity: 0.6;
+                transform: translateY(90vh) rotate(324deg) scale(0.8);
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg) scale(0.3);
+                opacity: 0;
+            }
+        }
+
+        /* Custom Cursor Canvas */
+        #cursor-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: multiply;
+        }
+
+        /* Ripple Effect */
+        .cursor-ripple {
+            position: fixed;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 204, 231, 0.6) 0%, rgba(255, 204, 231, 0.3) 30%, rgba(255, 204, 231, 0.1) 60%, transparent 100%);
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            animation: rippleEffect 0.5s ease-out;
+        }
+
+        @keyframes rippleEffect {
+            0% {
+                width: 10px;
+                height: 10px;
+                opacity: 1;
+            }
+            100% {
+                width: 80px;
+                height: 80px;
+                opacity: 0;
+            }
+        }
+
+        /* Compact responsive design */
+        @media (max-width: 480px) {
+            .container {
+                padding: clamp(12px, 3vw, 20px) clamp(12px, 3vw, 16px);
+                gap: clamp(16px, 4vw, 24px);
+            }
+            
+            .message-bubble {
+                max-width: 90vw;
+                padding: 12px 16px;
+                font-size: 0.9rem;
+                border-radius: 20px;
+            }
+            
+            .messages-container {
+                min-height: 35vh;
+                height: 35vh;
+            }
+            
+            .float-element {
+                font-size: 16px;
+            }
+            
+            #heart-container {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        @media (min-width: 481px) and (max-width: 768px) {
+            .message-bubble {
+                max-width: 400px;
+            }
+            
+            .messages-container {
+                min-height: 38vh;
+                height: 38vh;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                max-width: 90vw;
+            }
+            
+            .message-bubble {
+                max-width: 450px;
+            }
+        }
+        
+        @media (min-width: 1025px) {
+            .message-bubble {
+                max-width: 500px;
+            }
+        }
+        
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor Canvas -->
+    <canvas id="cursor-canvas"></canvas>
+    
+    <div id="heart-container">
+        <div id="beating-heart"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>🎀 Chúc Mừng 20/10 🎀</h1>
+            <p>Dành tặng các bạn nữ lớp 12A10 xinh đẹp 💖</p>
+        </div>
+
+        <div class="btn-container">
+            <button class="wish-btn" onclick="showRandomWish()">Hiện lời chúc 🎀</button>
+        </div>
+
+        <div class="messages-container" id="messagesContainer"></div>
+    </div>
+
+    <script>
+        const messages = [
+            "Chúc các bạn nữ 12A10 xinh như hoa, học giỏi như thần! 🎀🌸",
+            "20/10 vui vẻ nha, mong các bà luôn tươi rói như bông hồng sớm mai 💐",
+            "Chúc các cô gái 12A10 xinh đẹp, hạnh phúc, không deadline nào dọa nổi! 💖",
+            "Mong ngày nào cũng là 20/10 đối với các bà - được chiều, được cưng, không bị gọi kiểm tra ✨",
+            "Xinh gái, học giỏi, ăn ngon, ngủ kỹ - combo hoàn hảo của 12A10 🎀",
+            "20/10 vui nhaaaa, mãi xinh, mãi dễ thương như icon 💕",
+            "Chúc các bà luôn tự tin như khi selfie góc nghiêng 45 độ 🌸",
+            "12A10 nữ sinh: đáng yêu, bản lĩnh, và luôn tỏa sáng 💫",
+            "Hôm nay 20/10, chúc các bạn nữ không phải làm bài tập 🎁",
+            "Xinh gái không cần filter, học giỏi không cần múa phím 🎀",
+            "Chúc các bà luôn vui, không stress vì văn, không khổ vì toán 💐",
+            "Chúc cả lớp 12A10 nữ sinh cười suốt ngày, chẳng thấy buồn đâu ✨",
+            "20/10 tới, chúc ai cũng nhận được ít nhất 3 món quà 💖",
+            "Mong mỗi ngày đến trường là một ngày hạnh phúc 🎀",
+            "Cảm ơn vì đã khiến lớp 12A10 rực rỡ hơn bao giờ hết 🌸",
+            "Xinh như tiên, học như chiến binh, cười như nắng sớm ☀️",
+            "Chúc cô giáo và các bạn nữ luôn là nóc của 12A10 🎀",
+            "Hôm nay không ai được buồn, chỉ được cute thôi nha 💕",
+            "Chúc cho mỗi người một bông hoa, một nụ cười, một bầu trời hạnh phúc 🌷",
+            "Hôm nay ai đăng story cũng được react ❤️",
+            "Mong crush rep tin nhắn đúng ngày 20/10 😳",
+            "20/10 là ngày chính thức để nữ quyền lên ngôi ✨",
+            "Chúc những cô gái 12A10 luôn biết mình đẹp theo cách riêng 💐",
+            "Cười lên nào, vì cười xong xinh gấp đôi 🎀",
+            "Ai buồn hôm nay là phạm luật 20/10 nha 😝",
+            "Chúc mỗi người một nụ cười, một viên kẹo và một lời khen 💖",
+            "Mấy bà là lý do lớp này có năng lượng dễ thương thế đó 🎀",
+            "Mong hôm nay là ngày đầy bánh, hoa và quà 💐",
+            "20/10, hãy để bản thân được xinh và chill hết cỡ ✨",
+            "Các bà ơi, hôm nay đừng làm gì ngoài việc nhận lời chúc 💖",
+            "Mỗi nụ cười của 12A10 là một nguồn năng lượng 💕",
+            "Chúc ai đó hôm nay nhận được hoa và cả lời tỏ tình 😏",
+            "Hôm nay đẹp như cổ tích, vì có các bà trong đó 🎀",
+            "Nữ sinh 12A10 auto xinh + thông minh + thần thái 💫",
+            "Chúc 12A10 ngày càng cháy hơn trong học tập và tình bạn 💐",
+            "Cảm ơn vì đã khiến lớp học không bao giờ nhàm chán ✨",
+            "20/10 - ngày hợp pháp để được cưng chiều 💖",
+            "Mong mọi ước mơ nhỏ bé đều thành hiện thực 🎀",
+            "Chúc những cô gái đáng yêu luôn tỏa sáng như ngôi sao 🌟",
+            "Ai thấy tin nhắn này auto được chúc hạnh phúc ✨",
+            "Mấy bà xứng đáng được tặng cả tiệm hoa 💐",
+            "Chúc 12A10 có ngày 20/10 ngọt như trà sữa 💕",
+            "Mong cả lớp cười mỏi miệng vì vui 💖",
+            "Ai cũng là nữ chính trong bộ phim của chính mình 🎀",
+            "Chúc lớp mình tràn ngập tiếng cười và kẹo 🍬",
+            "Hôm nay không lo học, chỉ lo vui nha 💐",
+            "12A10 có 10 điểm đáng yêu 🎀",
+            "Chúc cho ai đó được thả tim thật nhiều hôm nay ❤️",
+            "20/10 hạnh phúc, rạng rỡ và không thiếu ảnh đẹp ✨",
+            "Cả lớp là bầu trời toàn hoa và nụ cười 🌸",
+            "Chúc cho 12A10 luôn đoàn kết và rực rỡ 💐",
+            "Hôm nay là ngày của mấy bà, nên cứ xinh thôi 🎀",
+            "Cười tươi lên, thế giới sẽ dịu dàng lại 💖",
+            "20/10 ngọt hơn socola, tươi hơn cúc họa mi 🌼",
+            "Ai đọc được câu này là người xinh nhất lớp 💕",
+            "Hôm nay cứ để trai lo, gái chỉ việc xinh ✨",
+            "Mong mỗi cô gái đều tìm thấy niềm vui riêng 🎀",
+            "20/10 không cần hoa, chỉ cần bình yên 💖",
+            "Các bà chính là highlight của 12A10 🌸",
+            "Chúc cả lớp luôn đẹp bất chấp máy ảnh 💐",
+            "Mong mọi thứ tốt đẹp đều đến với các bạn nữ 🎀",
+            "Hãy yêu bản thân, vì bạn đáng giá 💕",
+            "Chúc mừng 20/10 - ngày của nụ cười 💖",
+            "Năm nay 12A10 xinh vượt chỉ tiêu ✨",
+            "Hôm nay được quyền chảnh mà không ai được cằn nhằn 😎",
+            "Mỗi cô gái là một bông hoa, cùng làm nên khu vườn 12A10 🌸",
+            "20/10 hạnh phúc, 21/10 vẫn vui, 22/10 vẫn xinh 🎀",
+            "Cảm ơn vì đã khiến tuổi học trò thật rực rỡ 💐",
+            "12A10 là phiên bản hoàn hảo của niềm vui ✨",
+            "Yêu thương gửi trọn đến tất cả những cô gái tuyệt vời nhất 💖"
+        ];
+
+        let usedMessages = [];
+        let currentBubbles = [];
+        let animationCounter = 0;
+
+        let isButtonCooldown = false;
+        
+        function showRandomWish() {
+            // Prevent multiple clicks in quick succession
+            if (isButtonCooldown) return;
+            isButtonCooldown = true;
+            
+            setTimeout(() => {
+                isButtonCooldown = false;
+            }, 1500);
+            
+            // Show 5 messages at once
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    createSingleMessage();
+                }, i * 150); // Stagger each message by 150ms
+            }
+        }
+        
+        function createSingleMessage() {
+            if (usedMessages.length === messages.length) {
+                usedMessages = [];
+            }
+
+            let availableMessages = messages.filter((msg, idx) => !usedMessages.includes(idx));
+            let randomIndex = Math.floor(Math.random() * availableMessages.length);
+            let messageText = availableMessages[randomIndex];
+            let originalIndex = messages.indexOf(messageText);
+            usedMessages.push(originalIndex);
+
+            const container = document.getElementById('messagesContainer');
+            const bubble = document.createElement('div');
+            bubble.className = 'message-bubble';
+            bubble.textContent = messageText;
+
+            // Enhanced positioning logic
+            const containerRect = container.getBoundingClientRect();
+            const maxX = Math.max(0, window.innerWidth - Math.min(520, window.innerWidth * 0.9));
+            const maxY = Math.max(150, containerRect.height - 80);
+            const x = Math.random() * maxX;
+            const y = Math.random() * maxY;
+
+            bubble.style.left = x + 'px';
+            bubble.style.top = y + 'px';
+            
+            container.appendChild(bubble);
+            currentBubbles.push(bubble);
+            animationCounter++;
+
+            // Enhanced cleanup with fade out
+            if (currentBubbles.length > 12) {
+                const oldBubble = currentBubbles.shift();
+                oldBubble.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+                oldBubble.style.transform = 'translateY(-20px) scale(0.8)';
+                oldBubble.style.opacity = '0';
+                setTimeout(() => {
+                    if (oldBubble.parentNode) {
+                        oldBubble.remove();
+                    }
+                }, 500);
+            }
+        }
+
+        // Enhanced floating elements with parallax
+        function createFloatingElements() {
+            const symbols = ['🎀', '💐', '🌸', '✨', '💖', '🌷', '💕', '🌺'];
+            const elementCount = Math.min(15, Math.max(8, Math.floor(window.innerWidth / 100)));
+            
+            for (let i = 0; i < elementCount; i++) {
+                const el = document.createElement('div');
+                el.className = 'float-element';
+                el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                el.style.left = Math.random() * 100 + '%';
+                el.style.top = Math.random() * 100 + '%';
+                el.style.animationDelay = Math.random() * 8 + 's';
+                el.style.animationDuration = (10 + Math.random() * 8) + 's';
+                
+                // Add parallax data attribute
+                el.dataset.parallaxSpeed = (0.3 + Math.random() * 0.7).toFixed(2);
+                
+                document.body.appendChild(el);
+            }
+        }
+        
+        // Parallax scroll effect
+        let ticking = false;
+        function updateParallax() {
+            const scrollY = window.pageYOffset;
+            const elements = document.querySelectorAll('.float-element');
+            
+            elements.forEach(el => {
+                const speed = parseFloat(el.dataset.parallaxSpeed);
+                const yPos = scrollY * speed;
+                el.style.transform = `translateY(${yPos}px)`;
+            });
+            
+            ticking = false;
+        }
+        
+        function requestParallax() {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }
+
+        // Optimized falling hearts
+        function createFallingHeart() {
+            // Limit hearts on smaller screens
+            const maxHearts = window.innerWidth < 768 ? 3 : 6;
+            const existingHearts = document.querySelectorAll('.falling-heart').length;
+            
+            if (existingHearts >= maxHearts) return;
+            
+            const heart = document.createElement('div');
+            heart.className = 'falling-heart';
+            heart.textContent = '💖';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (6 + Math.random() * 4) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.remove();
+                }
+            }, 10000);
+        }
+
+        // Initialize everything
+        createFloatingElements();
+        
+        // Add scroll listener for parallax
+        window.addEventListener('scroll', requestParallax, { passive: true });
+        
+        // Responsive heart creation
+        const heartInterval = setInterval(createFallingHeart, window.innerWidth < 768 ? 1200 : 800);
+        
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            clearInterval(heartInterval);
+        });
+
+        // ===== APPLE-STYLE CURSOR EFFECT =====
+        
+        // Customizable variables
+        const cursorColor = '#ffcce7'; // Pink pastel color
+        const trailOpacity = 0.35; // Trail opacity (0.2-0.5)
+        
+        // Cursor tracking variables
+        const cursor = {
+            x: 0,
+            y: 0,
+            targetX: 0,
+            targetY: 0
+        };
+        
+        const trail = [];
+        const maxTrailLength = 25;
+        
+        // Canvas setup
+        const canvas = document.getElementById('cursor-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        // Mouse tracking with smooth interpolation
+        document.addEventListener('mousemove', (e) => {
+            cursor.targetX = e.clientX;
+            cursor.targetY = e.clientY;
+        });
+        
+        // Click ripple effect
+        document.addEventListener('click', (e) => {
+            createRipple(e.clientX, e.clientY);
+        });
+        
+        // Create ripple effect on click
+        function createRipple(x, y) {
+            const ripple = document.createElement('div');
+            ripple.className = 'cursor-ripple';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            document.body.appendChild(ripple);
+            
+            // Remove ripple after animation completes
+            setTimeout(() => {
+                ripple.remove();
+            }, 500);
+        }
+        
+        // Smooth easing function (ease-out-cubic)
+        function easeOutCubic(t) {
+            return 1 - Math.pow(1 - t, 3);
+        }
+        
+        // Linear interpolation with custom easing
+        function lerp(start, end, factor) {
+            return start + (end - start) * factor;
+        }
+        
+        // Convert hex to RGB
+        function hexToRgb(hex) {
+            const r = parseInt(hex.slice(1, 3), 16);
+            const g = parseInt(hex.slice(3, 5), 16);
+            const b = parseInt(hex.slice(5, 7), 16);
+            return { r, g, b };
+        }
+        
+        const rgbColor = hexToRgb(cursorColor);
+        
+        // Animation loop
+        function animateCursor() {
+            // Smooth cursor movement with easing
+            const easingFactor = 0.12; // Controls smoothness (0.05-0.2)
+            cursor.x = lerp(cursor.x, cursor.targetX, easingFactor);
+            cursor.y = lerp(cursor.y, cursor.targetY, easingFactor);
+            
+            // Add current position to trail
+            trail.push({
+                x: cursor.x,
+                y: cursor.y,
+                timestamp: Date.now()
+            });
+            
+            // Remove old trail points
+            while (trail.length > maxTrailLength) {
+                trail.shift();
+            }
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw trail with gradient fade
+            trail.forEach((point, index) => {
+                const progress = index / (trail.length - 1);
+                const size = 6 + progress * 8; // Size grows along trail
+                const opacity = (progress * trailOpacity) * easeOutCubic(progress);
+                
+                // Create gradient for smooth blending
+                const gradient = ctx.createRadialGradient(
+                    point.x, point.y, 0,
+                    point.x, point.y, size
+                );
+                
+                // Dynamic color based on speed
+                const speed = index > 0 ? 
+                    Math.sqrt(
+                        Math.pow(point.x - trail[index - 1].x, 2) + 
+                        Math.pow(point.y - trail[index - 1].y, 2)
+                    ) : 0;
+                
+                // Shift to purple when moving fast
+                const colorShift = Math.min(speed / 10, 0.3);
+                const finalR = Math.floor(rgbColor.r - (rgbColor.r - 200) * colorShift);
+                const finalG = Math.floor(rgbColor.g - (rgbColor.g - 150) * colorShift);
+                const finalB = Math.floor(rgbColor.b + (255 - rgbColor.b) * colorShift);
+                
+                gradient.addColorStop(0, `rgba(${finalR}, ${finalG}, ${finalB}, ${opacity})`);
+                gradient.addColorStop(0.4, `rgba(${finalR}, ${finalG}, ${finalB}, ${opacity * 0.6})`);
+                gradient.addColorStop(1, `rgba(${finalR}, ${finalG}, ${finalB}, 0)`);
+                
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(point.x, point.y, size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            
+            // Draw main cursor dot
+            if (trail.length > 0) {
+                const mainGradient = ctx.createRadialGradient(
+                    cursor.x, cursor.y, 0,
+                    cursor.x, cursor.y, 12
+                );
+                
+                mainGradient.addColorStop(0, `rgba(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}, 0.8)`);
+                mainGradient.addColorStop(0.3, `rgba(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}, 0.5)`);
+                mainGradient.addColorStop(0.7, `rgba(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}, 0.2)`);
+                mainGradient.addColorStop(1, `rgba(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}, 0)`);
+                
+                ctx.fillStyle = mainGradient;
+                ctx.beginPath();
+                ctx.arc(cursor.x, cursor.y, 12, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Inner bright dot
+                const innerGradient = ctx.createRadialGradient(
+                    cursor.x, cursor.y, 0,
+                    cursor.x, cursor.y, 4
+                );
+                
+                innerGradient.addColorStop(0, `rgba(255, 255, 255, 0.9)`);
+                innerGradient.addColorStop(0.6, `rgba(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}, 0.7)`);
+                innerGradient.addColorStop(1, `rgba(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}, 0)`);
+                
+                ctx.fillStyle = innerGradient;
+                ctx.beginPath();
+                ctx.arc(cursor.x, cursor.y, 4, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            requestAnimationFrame(animateCursor);
+        }
+        
+        // Initialize cursor position
+        cursor.x = window.innerWidth / 2;
+        cursor.y = window.innerHeight / 2;
+        cursor.targetX = cursor.x;
+        cursor.targetY = cursor.y;
+        
+        // Start animation
+        animateCursor();
+        
+        // Handle mouse enter/leave for smooth transitions
+        document.addEventListener('mouseenter', () => {
+            canvas.style.opacity = '1';
+        });
+        
+        document.addEventListener('mouseleave', () => {
+            canvas.style.opacity = '0.5';
+        });
+        
+        // ===== END CURSOR EFFECT =====
+    </script>
+</body>
+</html>
