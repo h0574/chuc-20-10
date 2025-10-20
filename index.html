@@ -873,7 +873,19 @@
         document.addEventListener('mouseleave', () => {
             canvas.style.opacity = '0.5';
         });
-        
+        <!-- Hiển thị số lượt truy cập -->
+<p id="viewerCount" style="text-align:center; color:#ff69b4; font-family:'Poppins', sans-serif; font-size:1.2em; margin-top:20px;">
+  Đang tải số lượt xem... 💖
+</p>
+
+<script>
+  async function updateViewCount() {
+    const response = await fetch("https://api.countapi.xyz/hit/20-10-demo.github.io/views");
+    const data = await response.json();
+    document.getElementById("viewerCount").innerHTML = `🌸 Bạn là người thứ <b>${data.value}</b> xem lời chúc này 💕`;
+  }
+  updateViewCount();
+</script>
         // ===== END CURSOR EFFECT =====
     </script>
 </body>
